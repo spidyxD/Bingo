@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Jugador">
+  <ClassDiagramComponents>
+    <Class name="Jugador" package="bingo" visibility="public" xPosition="299.0" yPosition="67.0">
+      <Fields>
+        <Field name="cant" type="int" visibility="package"/>
+        <Field name="tabs" type="List&lt;Tablero&gt;" visibility="package"/>
+        <Field name="count" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTabs" returnType="List&lt;Tablero&gt;" visibility="public"/>
+        <Method name="getCount" returnType="int" visibility="public"/>
+        <Method name="setCount" returnType="void" visibility="public">
+          <Argument type="int" name="count"/>
+        </Method>
+        <Method name="setTabs" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Tablero&gt;" name="tabs"/>
+        </Method>
+        <Method name="getCant" returnType="int" visibility="public"/>
+        <Method name="setCant" returnType="void" visibility="public">
+          <Argument type="int" name="cant"/>
+        </Method>
+        <Method name="initTabs" returnType="void" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

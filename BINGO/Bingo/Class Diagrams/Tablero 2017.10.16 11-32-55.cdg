@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Tablero">
+  <ClassDiagramComponents>
+    <Class name="Tablero" package="bingo" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="tab" type="ArrayList&lt;Integer&gt;" visibility="private"/>
+        <Field name="nA" type="int[]" visibility="private"/>
+        <Field name="nA2" type="int[]" visibility="private"/>
+        <Field name="nA3" type="int[]" visibility="private"/>
+        <Field name="nA4" type="int[]" visibility="private"/>
+        <Field name="nA5" type="int[]" visibility="private"/>
+        <Field name="count" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCount" returnType="int" visibility="public"/>
+        <Method name="setCount" returnType="void" visibility="public">
+          <Argument type="int" name="count"/>
+        </Method>
+        <Method name="getTab" returnType="ArrayList" visibility="public"/>
+        <Method name="setTab" returnType="void" visibility="public">
+          <Argument type="ArrayList" name="tab"/>
+        </Method>
+        <Method name="mixed" returnType="int[]" visibility="public">
+          <Argument type="int[]" name="aux"/>
+          <Argument type="Random" name="r"/>
+        </Method>
+        <Method name="myR" returnType="Stack" visibility="public"/>
+        <Method name="fillTab" returnType="void" visibility="public"/>
+        <Method name="printTab" returnType="StringBuilder" visibility="public"/>
+        <Method name="reporteTabs" returnType="StringBuilder" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

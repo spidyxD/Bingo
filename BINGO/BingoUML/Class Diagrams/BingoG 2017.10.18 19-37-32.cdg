@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BingoG">
+  <ClassDiagramComponents>
+    <Class name="Bingo" package="BingoG" visibility="public" xPosition="29.0" yPosition="-210.0">
+      <Fields>
+        <Field name="players" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="ronda" type="int" visibility="private"/>
+        <Field name="cartWing" type="String" visibility="private"/>
+        <Field name="modeWing" type="String" visibility="private"/>
+        <Field name="whoWing" type="String" visibility="private"/>
+        <Field name="mG" type="int[]" visibility="private"/>
+        <Field name="numbers" type="int[]" visibility="private"/>
+        <Field name="nums" type="Stack&lt;Integer&gt;" visibility="private"/>
+        <Field name="auxN" type="Stack&lt;Integer&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCartWing" returnType="String" visibility="public"/>
+        <Method name="setCartWing" returnType="void" visibility="public">
+          <Argument type="String" name="cartWing"/>
+        </Method>
+        <Method name="getModeWing" returnType="String" visibility="public"/>
+        <Method name="setModeWing" returnType="void" visibility="public">
+          <Argument type="String" name="modeWing"/>
+        </Method>
+        <Method name="getRonda" returnType="int" visibility="public"/>
+        <Method name="setRonda" returnType="void" visibility="public">
+          <Argument type="int" name="ronda"/>
+        </Method>
+        <Method name="getWhoWing" returnType="String" visibility="public"/>
+        <Method name="setWhoWing" returnType="void" visibility="public">
+          <Argument type="String" name="whoWing"/>
+        </Method>
+        <Method name="getAuxN" returnType="Stack&lt;Integer&gt;" visibility="public"/>
+        <Method name="setAuxN" returnType="void" visibility="public">
+          <Argument type="Stack&lt;Integer&gt;" name="auxN"/>
+        </Method>
+        <Method name="getPlayers" returnType="ArrayList&lt;Jugador&gt;" visibility="public"/>
+        <Method name="setPlayers" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="players"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="initPlayers" returnType="void" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="addXP" returnType="void" visibility="public">
+          <Argument type="Tablero" name="t"/>
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="verifyPatronLH" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronLV" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronDiag" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronC" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronX" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronU" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronO" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronALL" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="waitSeconds" returnType="void" visibility="public">
+          <Argument type="int" name="segundos"/>
+        </Method>
+        <Method name="GAMEMODE" returnType="boolean" visibility="public">
+          <Argument type="int" name="g"/>
+          <Argument type="Jugador" name="j"/>
+        </Method>
+        <Method name="mixed" returnType="int[]" visibility="public">
+          <Argument type="int[]" name="aux"/>
+          <Argument type="Random" name="r"/>
+        </Method>
+        <Method name="myR" returnType="Stack" visibility="public">
+          <Argument type="Stack" name="nAx"/>
+        </Method>
+        <Method name="getNCol" returnType="String" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="stackPrint" returnType="StringBuilder" visibility="public"/>
+        <Method name="buildHTML" returnType="void" visibility="public">
+          <Argument type="StringBuilder" name="aux"/>
+        </Method>
+        <Method name="reporteFinal" returnType="StringBuilder" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="j"/>
+          <Argument type="int" name="tGame"/>
+          <Argument type="int" name="cJ"/>
+          <Argument type="int" name="nCar"/>
+          <Argument type="int" name="nx"/>
+          <Argument type="StringBuilder" name="end"/>
+        </Method>
+        <Method name="reporteRonda" returnType="StringBuilder" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="j"/>
+          <Argument type="int" name="cJ"/>
+          <Argument type="int" name="nCar"/>
+          <Argument type="int" name="nx"/>
+        </Method>
+        <Method name="iniciarJuego" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="BingoG" visibility="public" xPosition="376.0" yPosition="260.0">
+      <Fields>
+        <Field name="cant" type="int" visibility="package"/>
+        <Field name="tabs" type="List&lt;Tablero&gt;" visibility="package"/>
+        <Field name="count" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTabs" returnType="List&lt;Tablero&gt;" visibility="public"/>
+        <Method name="getCount" returnType="int" visibility="public"/>
+        <Method name="setCount" returnType="void" visibility="public">
+          <Argument type="int" name="count"/>
+        </Method>
+        <Method name="setTabs" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Tablero&gt;" name="tabs"/>
+        </Method>
+        <Method name="getCant" returnType="int" visibility="public"/>
+        <Method name="setCant" returnType="void" visibility="public">
+          <Argument type="int" name="cant"/>
+        </Method>
+        <Method name="initTabs" returnType="void" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Numero" package="BingoG" visibility="public" xPosition="702.0" yPosition="11.0">
+      <Fields>
+        <Field name="number" type="int" visibility="package"/>
+        <Field name="flag" type="boolean" visibility="package"/>
+        <Field name="x" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="number"/>
+          <Argument type="boolean" name="flag"/>
+          <Argument type="String" name="x"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="isFlag" returnType="boolean" visibility="public"/>
+        <Method name="setFlag" returnType="void" visibility="public">
+          <Argument type="boolean" name="flag"/>
+        </Method>
+        <Method name="getX" returnType="String" visibility="public"/>
+        <Method name="setX" returnType="void" visibility="public">
+          <Argument type="String" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tablero" package="BingoG" visibility="public" xPosition="736.0" yPosition="489.0">
+      <Fields>
+        <Field name="tab" type="ArrayList&lt;Numero&gt;" visibility="private"/>
+        <Field name="nA" type="int[]" visibility="private"/>
+        <Field name="nA2" type="int[]" visibility="private"/>
+        <Field name="nA3" type="int[]" visibility="private"/>
+        <Field name="nA4" type="int[]" visibility="private"/>
+        <Field name="nA5" type="int[]" visibility="private"/>
+        <Field name="count" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCount" returnType="int" visibility="public"/>
+        <Method name="setCount" returnType="void" visibility="public">
+          <Argument type="int" name="count"/>
+        </Method>
+        <Method name="getTab" returnType="ArrayList&lt;Numero&gt;" visibility="public"/>
+        <Method name="setTab" returnType="void" visibility="public">
+          <Argument type="ArrayList" name="tab"/>
+        </Method>
+        <Method name="mixed" returnType="int[]" visibility="public">
+          <Argument type="int[]" name="aux"/>
+          <Argument type="Random" name="r"/>
+        </Method>
+        <Method name="myR" returnType="Stack" visibility="public"/>
+        <Method name="fillTab" returnType="void" visibility="public"/>
+        <Method name="printTab" returnType="StringBuilder" visibility="public"/>
+        <Method name="reporteTabs" returnType="StringBuilder" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tab" source="BingoG.Tablero" target="BingoG.Numero" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Numero&gt;"/>
+    <UseRelation source="BingoG.Bingo" target="BingoG.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="BingoG.Tablero" target="BingoG.Numero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="BingoG.Jugador" target="BingoG.Tablero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="BingoG.Bingo" target="BingoG.Tablero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tabs" source="BingoG.Jugador" target="BingoG.Tablero" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Tablero&gt;"/>
+    <HasRelation name="players" source="BingoG.Bingo" target="BingoG.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

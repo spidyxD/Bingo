@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Bingo">
+  <ClassDiagramComponents>
+    <Class name="Bingo" package="bingo" visibility="public" xPosition="25.0" yPosition="-52.0">
+      <Fields>
+        <Field name="players" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="modeWing" type="String" visibility="private"/>
+        <Field name="whoWing" type="String" visibility="private"/>
+        <Field name="mG" type="int[]" visibility="private"/>
+        <Field name="numbers" type="int[]" visibility="private"/>
+        <Field name="nums" type="Stack&lt;Integer&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getModeWing" returnType="String" visibility="public"/>
+        <Method name="setModeWing" returnType="void" visibility="public">
+          <Argument type="String" name="modeWing"/>
+        </Method>
+        <Method name="getWhoWing" returnType="String" visibility="public"/>
+        <Method name="setWhoWing" returnType="void" visibility="public">
+          <Argument type="String" name="whoWing"/>
+        </Method>
+        <Method name="getPlayers" returnType="ArrayList&lt;Jugador&gt;" visibility="public"/>
+        <Method name="setPlayers" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="players"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="initPlayers" returnType="void" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="addXP" returnType="void" visibility="public">
+          <Argument type="Tablero" name="t"/>
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="verifyPatronLH" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronLV" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronDiag" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronC" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronX" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronU" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronO" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="verifyPatronALL" returnType="Boolean" visibility="public">
+          <Argument type="Tablero" name="t"/>
+        </Method>
+        <Method name="waitSeconds" returnType="void" visibility="public">
+          <Argument type="int" name="segundos"/>
+        </Method>
+        <Method name="GAMEMODE" returnType="boolean" visibility="public">
+          <Argument type="int" name="g"/>
+          <Argument type="Jugador" name="j"/>
+        </Method>
+        <Method name="mixed" returnType="int[]" visibility="public">
+          <Argument type="int[]" name="aux"/>
+          <Argument type="Random" name="r"/>
+        </Method>
+        <Method name="myR" returnType="Stack" visibility="public">
+          <Argument type="Stack" name="nAx"/>
+        </Method>
+        <Method name="getNCol" returnType="String" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="iniciarJuego" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
